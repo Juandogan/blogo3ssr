@@ -5,10 +5,12 @@
 /out-tsc
 /bazel-out
 /subidas
+/blogo3
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
+/subidas
 
 # IDEs and editors
 .idea/
