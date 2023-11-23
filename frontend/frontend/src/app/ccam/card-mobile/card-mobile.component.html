@@ -1,0 +1,76 @@
+
+<div *ngIf="this.data">
+
+<div style="background-color:rgb(80, 80, 80); min-height: 150px; margin-left: 10px; margin-right: 10px; border-radius: 4px;">
+    <div class="row" style="margin:0px; padding:0px">
+        <div class="col-4"style="margin:0px; padding:0px" >
+            <img src="{{data[0]?.imagen1}}"alt="" width="100%">
+        </div>
+        <div class="col-8" >
+            <div style="text-align:left">
+                <br>
+                <h6 class="categoria">{{data[0]?.categoria1}}</h6>
+
+                <h1 class="robotoBlack " (click)="pasar()" routerLink="../articulo/{{data[0]?.titulo2}}" >{{data[0]?.titulo1}} </h1>
+
+                <p class="truncar4">{{data[0]?.subtitulo1}}
+                    <p>
+                        {{data[0]?.autor}}
+                    </p>
+            </div>
+        </div>
+
+    </div>
+
+</div> 
+ <br>
+
+ <div style="background-color:rgb(80, 80, 80); min-height: 150px; margin-left: 10px; margin-right: 10px; border-radius: 4px;">
+    <div class="row" style="margin:0px; padding:0px">
+        <div class="col-4"style="margin:0px; padding:0px" >
+            <img src="{{data[1]?.imagen1}}"alt="" width="100%">
+        </div>
+        <div class="col-8" >
+            <div style="text-align:left">
+                <br>
+                <h6 class="categoria">{{data[1]?.categoria1}}</h6>
+
+                <h1 class="robotoBlack " (click)="pasar()" routerLink="../articulo/{{data[1]?.titulo2}}">{{data[1]?.titulo1}} </h1>
+
+                <p class="truncar4">{{data[1]?.subtitulo1}}
+                    <p>
+                        {{data[1]?.autor}}
+                    </p>
+            </div>
+        </div>
+
+    </div>
+
+</div> 
+ <br>
+
+ <div *ngIf="data[2]" style="background-color:rgb(80, 80, 80); min-height: 150px; margin-left: 10px; margin-right: 10px; border-radius: 4px;">
+    <div class="row" style="margin:0px; padding:0px">
+        <div class="col-4"style="margin:0px; padding:0px" >
+            <img src="{{data[2]?.imagen1}}"alt="" width="100%">
+        </div>
+        <div class="col-8" >
+            <div style="text-align:left">
+                <br>
+                <h6 class="categoria">{{data[2]?.categoria1}}</h6>
+
+                <h1 class="robotoBlack " (click)="pasar()" routerLink="../articulo/{{data[2]?.titulo2}}" >{{data[2]?.titulo1}} </h1>
+
+                <p class="truncar4">{{data[2]?.subtitulo1}}
+                    <p>
+                        {{data[2]?.autor}}
+                    </p>
+            </div>
+        </div>
+
+    </div>
+
+</div> 
+ 
+
+<div>

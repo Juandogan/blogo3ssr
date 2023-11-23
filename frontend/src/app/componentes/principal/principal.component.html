@@ -1,0 +1,147 @@
+
+<div *ngIf="this.anuncios" class="fondo margenL margenR" style="text-align: center; margin-top: -1px;">
+  <div  class="row fondoRow" style="margin: 0px; padding:0px ">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 fondoCol">
+
+      <!-- CARROUSLE -->
+      <div  class="margenRCorreccion" style="height: 560px;">
+        <app-carousel [data]="portadaCarousel" ></app-carousel>
+
+        <!-- <h3 style="margin-top: 20px;">Artículos de Montaña</h3> -->
+
+        <div *ngIf="portada" class="cardMobile">
+          <app-card-mobile [data]="portada"></app-card-mobile>
+          <br />
+        </div>
+        <div *ngIf="this.anuncios" class="onlyMobile" [ngClass]="{'margenTop':this.anuncios[0]?.img15 }">
+          <a href="{{this.anuncios[0]?.link1}}" target="_blank">
+          <img *ngIf="this.anuncios[0]?.img1" src="{{this.anuncios[0]?.img1}}" (click)="sumarContadorAunciante(1)"
+            alt="" style="object-fit: cover; width: 99%" />   
+          </a>
+        </div>
+        <div style="margin-top:60px ;">
+
+          <div class="cardMobile">
+            <app-card-mobile [data]="portadaTrio"></app-card-mobile>
+            <br>
+            <br>
+          </div>
+          <div *ngIf="this.anuncios" class="onlyMobile" style="margin-top: -25px">
+            <a href="{{this.anuncios[0].link3}}" target="_blank">
+            <img (click)="sumarContadorAunciante(3)" src="{{this.anuncios[0].img3}}" alt=""
+              style="object-fit: cover; width: 99%" />
+            </a>
+              <br>
+              <br>
+              <br>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="row row2 correccion" style="margin-left: -20px; margin-top: -40px;">
+        <div *ngFor="let porta of portada  | filtrox2" class="col-6 quitar600  "
+          style="padding-right: 0px; padding-left: 20px">
+
+          <app-card-bajo-portada [data]="porta"></app-card-bajo-portada>
+        </div>
+
+      </div>
+    </div>
+
+    <div *ngIf="!loader" class="col-4 quitar810" style="margin-top: 0px; padding-right: 20px; padding-left: 20px;">
+      <a target="_blank" rel="noopener noreferrer" href="{{this.anuncios[0].link1}}">
+        <img src="{{ this.anuncios[0]?.img1 }}" (click)="sumarContadorAunciante(1)" width="100%" height="500px" alt=""
+          style="margin-top: 20px;object-fit: fill;  " />
+      </a>
+
+
+
+      <div style="margin-top: 20px; text-align: left">
+        <a target="_blank" rel="noopener noreferrer" href="{{this.anuncios[0].link3}}">
+          <img src="{{ this.anuncios[0]?.img3 }}" (click)="sumarContadorAunciante(3)" width="100%" alt=""
+            style="margin-top: 0px; object-fit: fill; height: 490px" />
+        </a>
+      </div>
+      <!--
+        <img src="../../../assets/image 26.png" width="100%" height="200px" alt=""
+          style="margin-top:10px; object-fit: cover;"> -->
+    </div>
+    <br>
+    <div style="text-align: left; background-color: gray; margin-top: 20px;" >
+<h2 style="color:white; margin-left: 20px;">Revista Noticias de Montaña</h2>
+</div>
+<br>
+<app-carousel-revista [data]="porta" style="margin-top: 10px; margin-left: 10px; padding-right: 30px;"></app-carousel-revista>
+
+<!-- fragmento publicidad ancha que varia a de 1 a dos  -->
+<div *ngIf="this.anuncios[0].img2" style="display: flex; margin-bottom: 20px;">
+  <div>
+<a target="_blank" rel="noopener noreferrer" href="{{this.anuncios[0].link4}}" style="margin-bottom: 20px;">
+  <img class="quitar600 imagenAnuncio" *ngIf="!loader" src="{{ this.anuncios[0]?.img4}}"
+    (click)="sumarContadorAunciante(4)" alt="" style="height: auto; " />
+</a>
+</div>
+<div>
+<a target="_blank" rel="noopener noreferrer" href="{{this.anuncios[0].link2}}" style="margin-bottom: 20px;">
+  <img class="quitar600 imagenAnuncio" *ngIf="!loader" src="{{ this.anuncios[0]?.img2}}"
+    (click)="sumarContadorAunciante(4)" alt="" style="height: auto; " />
+</a>
+
+</div>
+</div>
+<!-- fragmento publicidad ancha que varia a de 1 a dos  -->
+
+<!-- Publicidad ancha entera -->
+<div *ngIf="!this.anuncios[0].img2">
+    <a target="_blank" rel="noopener noreferrer" href="{{this.anuncios[0].link4}}" style="margin-bottom: 20px;">
+      <img class="quitar600 imagenAnuncio" *ngIf="!loader" src="{{ this.anuncios[0]?.img4}}"
+        (click)="sumarContadorAunciante(4)" alt="" style="height: auto; " />
+    </a>
+  </div>
+<!-- Publicidad ancha entera -->
+
+
+    <!-- INICIO "2DO BLOQUE" -->
+    <div *ngIf="!loader && portadaTrio" class="row quitar600">
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 " style="margin-top: 20px; padding-right: 1px">
+        <app-card-bajopublix3 [data]="portadaTrio"></app-card-bajopublix3>
+        <!-- | posiciones: 3 -->
+      </div>
+
+      <div *ngIf="!loader" class="col-4 quitar810 " style="margin:0px; margin-top: 20px">
+        <a target="_blank" rel="noopener noreferrer" href="{{this.anuncios[0].link5}}">
+          <img src="{{ this.anuncios[0]?.img5 }}" width="109%" height="400px" (click)="sumarContadorAunciante(5)" alt=""
+            style="padding-right: 20px;padding-left: 10px;" />
+        </a>
+
+        <a target="_blank" rel="noopener noreferrer" href="{{this.anuncios[0].link6}}">
+          <img src="{{ this.anuncios[0]?.img6 }}" (click)="sumarContadorAunciante(6)" width="109%" height="390px" alt=""
+            style="margin-top: 15px; object-fit: fill; padding-right: 20px; padding-left: 10px;" />
+        </a>
+        <!-- <img src="../../../assets/image 26.png" width="100%" height="200px" alt=""
+            style="margin-top:10px; object-fit: cover;"> -->
+      </div>
+      <br />
+      <!-- <app-triple-card
+        [data]="articulos"
+        style="margin-top: 20px"
+      ></app-triple-card> -->
+      <h1></h1>
+
+    </div>
+    <!-- FIN "2DO BLOQUE" -->
+
+
+    <!-- <div style="background-color: rgb(50, 50, 50);">
+      <h6 style="color: rgb(185, 185, 185);margin-top:10px; font-size:12px">© 2022 Company, Inc</h6>
+    </div> -->
+
+    <!-- <app-carousel-categorias style="margin-bottom: 20px;"></app-carousel-categorias> -->
+    <br>
+    <br>
+  </div>
+
+
+  <app-footer *ngIf="!aux && !loader"></app-footer>
+</div>

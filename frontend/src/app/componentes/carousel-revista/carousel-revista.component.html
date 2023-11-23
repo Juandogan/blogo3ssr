@@ -1,0 +1,20 @@
+<swiper-container *ngIf="carga"
+slides-per-view="4" speed="500" loop="true" 
+css-mode="true" navigation="true" height="200">
+    
+    <swiper-slide *ngFor="let slide of slideData">
+        <div >
+          <a target="_blank" href="{{slide?.link}}" style="text-decoration: none; color:white">
+            {{slide?.titulo}}
+                      
+        <img src="{{slide?.subtitulo}}" height="350px" width="100%"  alt="">
+      </a>
+        
+    </div>
+    
+    
+  </swiper-slide>
+
+   
+ 
+  </swiper-container>

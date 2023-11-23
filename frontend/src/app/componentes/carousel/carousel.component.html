@@ -1,0 +1,22 @@
+<swiper-container *ngIf="load"
+slides-per-view="auto" speed="500" loop="true" 
+css-mode="true" navigation="true" height="500">
+    
+    <swiper-slide *ngFor="let slide of data">
+        <div >
+        <img src="{{slide.imagen1}}" height="500px" width="100%" style="object-fit: cover;" alt="">
+        <div style="text-align: left; background-color: rgba(0, 0, 0, 0.665); position:absolute;top:350px; color:white; width: 100%;bottom: 0;padding-left: 10px;" >  
+            <a target="_blank" routerLink="/articulo/{{slide.titulo2}}" style="text-decoration: none;">
+            <p class="categoria">{{slide.categoria1}}</p>
+            <h1 class="titulo" style="color:white">{{slide.titulo1}}</h1>
+            <p class="subtitulo">{{slide.subtitulo1}}</p>
+        </a>
+        </div>
+    </div>
+    
+    </swiper-slide>
+    
+
+   
+ 
+  </swiper-container>

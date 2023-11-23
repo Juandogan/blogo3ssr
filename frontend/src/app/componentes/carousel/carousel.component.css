@@ -1,0 +1,36 @@
+
+
+.titulo{font-family: "Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    text-shadow: 2px 2px 2px rgb(0,0,0);
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: -1px;
+    text-align: left!important;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: -17px;
+}
+
+.subtitulo{
+    color: rgb(207, 207, 207);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 0px;
+    margin-right: 30px;
+}
+
+.categoria{
+font-family: Roboto;
+ 
+ margin-top: 10px;
+    text-shadow: 2px 2px 2px rgb(0,0,0);
+    color: #fb0;
+    font-weight: 900;
+    text-transform: uppercase;
+    z-index: 1;
+    text-align: left!important;
+    font-size: 12px;
+}
