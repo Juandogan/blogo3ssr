@@ -14,8 +14,8 @@ import { Revista } from '../modelos/revista';
 export class CrudService {
 
 
-  //  readonly URL_API  = "https://www.culturademontania.org.ar/ccam";
-    readonly URL_API  = "http://localhost:4200/ccam2";
+   readonly URL_API  = "https://www.culturademontania.org.ar/ccam2";
+    // readonly URL_API  = "http://localhost:4200/ccam2";
    
   // readonly URL_AP3  = "http://localhost:3000/revista";
   // readonly URL_API2  = "http://localhost:3000/upload";
