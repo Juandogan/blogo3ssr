@@ -24,7 +24,7 @@ export class CrudService {
   readonly URL_AP3  = "https://www.culturademontania.org.ar/revista";
   readonly URL_API2  = "https://www.culturademontania.org.ar/upload";
   readonly URL_API4  = "https://www.culturademontania.org.ar/categorias";
-  readonly URL_API5  = "https://www.culturademontania.org.ar/ccam2/provincia";
+  readonly URL_API5  = "https://www.culturademontania.org.ar/ccam/provincia";
   readonly URL_API7  = "https://www.culturademontania.org.ar/ccam2/buscar";
 
 
