@@ -14,7 +14,8 @@ import { Revista } from '../modelos/revista';
 export class CrudService {
 
 
-   readonly URL_API  = "https://www.culturademontania.org.ar/ccam";
+  //  readonly URL_API  = "https://www.culturademontania.org.ar/ccam";
+    readonly URL_API  = "http://localhost:4200/ccam2";
    
   // readonly URL_AP3  = "http://localhost:3000/revista";
   // readonly URL_API2  = "http://localhost:3000/upload";
@@ -23,8 +24,8 @@ export class CrudService {
   readonly URL_AP3  = "https://www.culturademontania.org.ar/revista";
   readonly URL_API2  = "https://www.culturademontania.org.ar/upload";
   readonly URL_API4  = "https://www.culturademontania.org.ar/categorias";
-  readonly URL_API5  = "https://www.culturademontania.org.ar/ccam/provincia";
-  readonly URL_API7  = "https://www.culturademontania.org.ar/ccam/buscar";
+  readonly URL_API5  = "https://www.culturademontania.org.ar/ccam2/provincia";
+  readonly URL_API7  = "https://www.culturademontania.org.ar/ccam2/buscar";
 
 
   Articulos:Articulos[]=[];
